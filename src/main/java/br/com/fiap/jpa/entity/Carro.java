@@ -54,7 +54,7 @@ public class Carro implements Serializable {
     )
     private List<Acessorio> acessorios;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "modelo_id")
     private Modelo modelo;
 
