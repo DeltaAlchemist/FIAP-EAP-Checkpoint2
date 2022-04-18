@@ -28,7 +28,7 @@ public class Carro implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "carro")
     private Long id;
 
-    @Column(name = "ds_placa", nullable = false)
+    @Column(name = "ds_placa", nullable = false, unique = true)
     private String placa;
 
     @Column(name = "ds_cor", nullable = false)
@@ -128,10 +128,7 @@ public class Carro implements Serializable {
 
     @Override
     public String toString() {
-        return "Carro{" +
-                ", placa='" + placa + '\'' +
-                ", cor='" + cor + '\'' +
-                ", chassi='" + chassi + '\'' +
-                '}';
+        return "Modelo: " + this.modelo + "\nPlaca: " + this.placa + "\nCor: " + this.cor
+                + "\nChassi: " + this.chassi;
     }
 }

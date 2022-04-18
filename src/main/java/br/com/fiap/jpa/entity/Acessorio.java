@@ -46,6 +46,14 @@ public class Acessorio implements Serializable {
         return ativo;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
     }
